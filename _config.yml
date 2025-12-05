@@ -1,0 +1,33 @@
+# Site settings
+title: JC Liu Research Group
+description: Advanced Materials and Energy Research - Nankai University
+baseurl: ""
+url: "https://jcliugroup.github.io"
+
+# Build settings
+markdown: kramdown
+theme: null
+plugins:
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  publications:
+    output: false
+  team:
+    output: false
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor

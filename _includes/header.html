@@ -1,0 +1,29 @@
+<header class="site-header">
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo">
+        <a href="{{ '/' | relative_url }}">
+          <span class="logo-text">JC Liu Group</span>
+          <span class="logo-subtitle">Nankai University</span>
+        </a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
+        <li><a href="{{ '/research' | relative_url }}" {% if page.url == '/research/' or page.url == '/research' %}class="active"{% endif %}>Research</a></li>
+        <li><a href="{{ '/team' | relative_url }}" {% if page.url == '/team/' or page.url == '/team' %}class="active"{% endif %}>Team</a></li>
+        <li><a href="{{ '/publications' | relative_url }}" {% if page.url == '/publications/' or page.url == '/publications' %}class="active"{% endif %}>Publications</a></li>
+        <li><a href="{{ '/contact' | relative_url }}" {% if page.url == '/contact/' or page.url == '/contact' %}class="active"{% endif %}>Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  document.querySelector('.nav-toggle').addEventListener('click', function() {
+    document.querySelector('.nav-menu').classList.toggle('active');
+    this.classList.toggle('active');
+  });
+</script>
